@@ -1,0 +1,572 @@
+:root {
+  --nav-footer-bg-color: #181516;
+  --nav-footer-text-color: #d8d1ce;
+  --text-color: #000;
+  --logo-hover-color: #35ddf880;
+  --bg-color: #f5ede9;
+  --front-ft-color: #f5f8f1;
+  --black-shadow: #808080;
+  --btn-color: #1c1819;
+  --icon-color: #ff8c00;
+  --pro-desc-color: #525050;
+}
+
+/*TO reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**/
+html {
+  scroll-behavior: smooth; /*Smooth scrolling when clicking an anchor link*/
+  scroll-padding-top: 90px; /*solve the overlap, when clicking an anchor link*/
+}
+
+/**/
+body {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+
+/*header header->.logo/#nav-bar --------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--nav-footer-bg-color);
+  color: var(--nav-footer-text-color);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*logo*/
+.logo {
+  width: 370px;
+  min-width: 340px;
+  display: flex;
+  padding-left: 20px;
+}
+
+/**/
+.logo > img {
+  width: 60px;
+  margin: 10px 0;
+}
+
+/*logo heading*/
+.logo > h1 {
+  font-size: 2rem;
+  margin-left: -20px;
+  margin-bottom: 3px;
+  align-self: flex-end;
+}
+
+/**/
+.logo > h1:hover {
+  text-shadow: 3px 3px 6px var(--logo-hover-color);
+}
+
+#nav-bar {
+  width: 47%;
+  padding-right: 20px;
+}
+
+/*navbar ul*/
+#nav-bar > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*nav bar li*/
+header li {
+  font-size: 1.2rem;
+  padding-left: 30px;
+}
+
+/**/
+#nav-bar li > a:hover {
+  background-size: 100% 3px;
+}
+
+/*nav bar fratures*/
+#nav-bar li > a {
+  color: var(--nav-footer-text-color);
+  text-decoration: none;
+  background-image: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+}
+/*hero section-. h2/#form/#submit --------------------------------*/
+#hero {
+  background-color: var(--front-ft-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: clamp(150px, 50%, 610px);
+  margin: 110px 0 10px;
+  box-shadow: 5px 5px 10px var(--black-shadow);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/*hero heading*/
+#hero > h2 {
+  font-size: clamp(1.2rem, 2vw, 2.6rem);
+  margin: 0;
+  margin: 10px 0;
+}
+
+/*hero form*/
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 10px 0;
+}
+
+/*form email*/
+#form > #email {
+  background-color: inherit;
+  border: 1px solid;
+  border-radius: 7px;
+  min-height: 30px;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+/*For all buttons*/
+.btn {
+  border-radius: 5px;
+  margin: 10px auto;
+  width: 50%;
+  max-width: 140px;
+  font-size: 1rem;
+  background-color: var(--btn-color);
+  color: var(--front-ft-color);
+  min-height: 35px;
+  padding: 10px 0;
+}
+
+/*main container-> #features, #how-it-works, #pricing--------------------------------*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* features section-> .grid, .desc*/
+#features {
+  margin: 0 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*grid-> .icon, .desc*/
+.grid {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  max-width: 610px;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 10px #808080;
+  background-color: var(--front-ft-color);
+  border-radius: 15px;
+  padding: 4px 15px;
+}
+/*icon-> i*/
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 101px;
+  width: 20%;
+  color: var(--icon-color);
+  font-size: 4rem;
+  margin: auto 10px;
+}
+
+/*description-> h2, p */
+.desc {
+  width: 80%;
+  margin: 15px 20px;
+  text-align: justify;
+}
+
+/**/
+.desc > h2 {
+  margin: 0;
+}
+
+/**/
+.desc > p {
+  margin: 16px auto 10px;
+}
+
+/*Youtube video section-> iframe/#video  --------------------------------*/
+#how-it-works {
+  margin-bottom: 25;
+}
+
+/**/
+iframe {
+  width: 90%;
+  height: 100%;
+  min-width: 400px;
+  min-height: 230px;
+  box-shadow: 5px 5px 10px var(--black-shadow);
+  border: 0;
+}
+
+/*pricing section-> .products --------------------------------*/
+#pricing {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+  max-width: 900px;
+}
+
+/*products items section-> .level, h2, ol*/
+.products {
+  background-color: var(--front-ft-color);
+  margin: 0 15px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px var(--black-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*level heading*/
+.level {
+  background-color: var(--bg-color);
+  padding: 10px 30px;
+  border-radius: 7px;
+  font-size: 1.3rem;
+}
+
+/*pricing heading*/
+.products h2 {
+  margin: 5px auto;
+  font-size: 1.9rem;
+}
+
+/*product lists*/
+.products ol {
+  margin: 5px;
+}
+
+/*product list items*/
+.products ol li {
+  color: var(--pro-desc-color);
+  margin-bottom: 5px;
+}
+
+/*pricing buttom*/
+.products > .btn {
+  border-radius: 10px;
+}
+
+/*footer  --------------------------------*/
+footer {
+  background-color: var(--nav-footer-bg-color);
+  width: 90%;
+  margin-bottom: 15px;
+  border-radius: 7px;
+  padding: 15px;
+}
+
+/*all ul*/
+footer > ul {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+/**/
+footer ul > li {
+  padding-left: 30px;
+}
+
+/*span copyright*/
+footer > span {
+  color: var(--bg-color);
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+
+/*for all lists*/
+li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Media query for small devices (phones) ----------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+  /*header header->.logo/#nav-bar --------------------------------*/
+  #header {
+    flex-direction: column;
+    height: 75px;
+    justify-content: space-evenly;
+  }
+
+  /*logo*/
+  .logo {
+    width: 100%;
+    min-width: 230px;
+    margin-top: 5px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /**/
+  .logo > img {
+    width: 40px;
+    margin: 0;
+  }
+
+  /*logo heading*/
+  .logo > h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    align-self: center;
+  }
+
+  /**/
+  .logo > h1:hover {
+    text-shadow: 3px 3px 6px var(--logo-hover-color);
+  }
+
+  #nav-bar {
+    width: 100%;
+    padding: 0;
+  }
+
+  /*navbar ul*/
+  #nav-bar > ul {
+    justify-content: center;
+    margin: 5px 0;
+  }
+
+  /*nav bar li*/
+  header li {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  /**/
+  #nav-bar li > a:hover {
+    background-size: 100% 3px;
+  }
+
+  /*hero section-. h2/#form/#submit --------------------------------*/
+  #hero {
+    padding: 5px;
+    width: clamp(150px, 85%, 430px);
+    margin: 100px 0 10px;
+  }
+
+  /*hero heading*/
+  #hero > h2 {
+    font-size: clamp(1.1rem, 2vw, 2.6rem);
+    margin: 5px 0;
+  }
+
+  /*hero form*/
+  #form {
+    width: 55%;
+    margin: 5px 0;
+  }
+
+  /*form email*/
+  #form > #email {
+    font-size: 0.9rem;
+  }
+
+  /*For all buttons*/
+  .btn {
+    margin: 10px auto 0;
+    width: 70%;
+    font-size: 0.8rem;
+    padding: 5px 0;
+}
+
+  /*main container-> #features, #how-it-works, #pricing--------------------------------*/
+  .container {
+    margin-top: 25px;
+  }
+
+  /* features section-> .grid, .desc*/
+  #features {
+    margin: 0;
+    justify-content: space-evenly;
+  }
+
+  /*grid-> .icon, .desc*/
+  .grid {
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    min-width: 150px;
+    max-width: 430px;
+    padding: 10px;
+}
+  /*icon-> i*/
+  .icon {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /*description-> h2, p */
+  .desc {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  /**/
+  .desc > h2 {
+    text-align: center;
+  }
+
+  /**/
+  .desc > p {
+    margin: 10px 0;
+  }
+
+  /*Youtube video section-> iframe/#video  --------------------------------*/
+  #how-it-works {
+    text-align: center;
+    width: 100%;
+  }
+
+  /**/
+  iframe {
+    width: 85%;
+    min-width: 150px;
+    max-width: 430px;
+}
+
+  /*pricing section-> .products --------------------------------*/
+  #pricing {
+    margin-bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+  /*products items section-> .level, h2, ol*/
+  .products {
+    margin: 0 0 25px 0;
+    width: clamp(150px, 70%, 430px);
+    padding: 15px;
+}
+
+  /*footer  --------------------------------*/
+  footer {
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+ 
+
+  /**/
+  footer ul > li {
+    padding-left: 15px;
+    font-size: 0.9rem;
+}
+
+  /*span copyright*/
+  footer > span {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+/* Media query for tablets --------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 767.99px) and (max-width: 1023px) {
+  html {
+    scroll-padding-top: 85px; /*solve the overlap, when clicking an anchor link*/
+  }
+
+  /*header header->.logo/#nav-bar --------------------------------*/
+  #header {
+    height: 75px;
+  }
+
+  /**/
+  .logo > img {
+    width: 55px;
+  }
+
+  /*logo heading*/
+  .logo > h1 {
+    font-size: 1.8rem;
+  }
+
+  #nav-bar {
+    width: 45%;
+  }
+
+  /*nav bar li*/
+  header li {
+    font-size: 1.1rem;
+    padding-left: 25px;
+  }
+
+  /*hero section-. h2/#form/#submit --------------------------------*/
+  #hero {
+    width: clamp(470px, 50%, 610px);
+  }
+
+  /*grid-> .icon, .desc*/
+  .grid {
+    min-width: 470px;
+  }
+
+  /*pricing section-> .products --------------------------------*/
+  #pricing {
+    width: 85%;
+    max-width: 870px;
+  }
+
+  /*products items section-> .level, h2, ol*/
+  .products {
+    padding: 15px;
+  }
+}
